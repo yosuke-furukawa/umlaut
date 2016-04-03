@@ -1,0 +1,10 @@
+.editor {
+  display: flex;
+  flex-direction: row;
+}
+.code-wrapper{
+  display:block;
+  overflow-x:auto;
+  padding:0.5em;
+  background:#F0F0F0
+}

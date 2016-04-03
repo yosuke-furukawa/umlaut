@@ -1,0 +1,29 @@
+<html>
+<head>
+  <link rel="stylesheet" href="./renderer/main.css">
+  <script type="text/javascript" src='./renderer/plantuml.js'></script>
+  <script type="text/javascript" src='./renderer/loaduml.js'></script>
+</head>
+
+<body>
+  <div>
+    Sample :
+    <ul>
+      <li><a href='#' onclick='loaduml("./sample/class.uml")'>class diagram</a></li>
+      <li><a href='#' onclick='loaduml("./sample/sequence.uml")'>sequence diagram</a></li>
+      <li><a href='#' onclick='loaduml("./sample/activity.uml")'>activity diagram</a></li>
+      <li><a href='#' onclick='loaduml("./sample/usecase.uml")'>usecase diagram</a></li>
+      <li><a href='#' onclick='loaduml("./sample/component.uml")'>component diagram</a></li>
+      <li><a href='#' onclick='loaduml("./sample/state.uml")'>state diagram</a></li>
+    </ul>
+  </div>
+  <div class='editor'>
+    <pre class="code-wrapper">
+      <code id='uml' class="code-wrapper" contenteditable>
+      </code>
+      <input type='button' id='preview' value='preview'>
+    </pre>
+    <img id='output'>
+  </div>
+</body>
+</html> 

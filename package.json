@@ -1,0 +1,23 @@
+{
+  "name": "umlaut",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron main.js",
+    "release": "electron-packager build/ --all",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "electron-prebuilt": "^0.37.3",
+    "jquery": "^2.2.2",
+    "node-plantuml": "^0.4.4"
+  },
+  "devDependencies": {
+    "electron-gh-releases": "^2.0.2",
+    "electron-packager": "^6.0.0"
+  }
+}
