@@ -6,9 +6,8 @@ const UMLAUT_DIR = path.join(os.tmpDir(), 'umlaut_dir');
 
 try {
   fs.accessSync(UMLAUT_DIR);
-  fs.mkdirSync(UMLAUT_DIR);
 } catch(e) {
-  // Do nothing
+  fs.mkdirSync(UMLAUT_DIR);
 }
 
 const FILENAME = path.join(UMLAUT_DIR, 'output.png');
@@ -18,8 +17,12 @@ const main = () => {
   const umlArea = document.getElementById('uml');
   const preview = document.getElementById('preview');
   const img = document.getElementById('output');
-  umlArea.innerText = umlArea.innerText.trim() || fs.readFileSync(UMLNAME).toString();
   img.src = `${FILENAME}`;
+  try {
+    umlArea.innerText = umlArea.innerText.trim() || fs.readFileSync(UMLNAME).toString();
+  } catch (e) {
+    // Do nothing;
+  }
 
   const onUpdate = () => {
     const text = umlArea.innerText.trim();
