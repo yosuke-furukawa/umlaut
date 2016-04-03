@@ -2,6 +2,7 @@
 <head>
   <link rel="stylesheet" href="./renderer/main.css">
   <script type="text/javascript" src='./renderer/plantuml.js'></script>
+  <script type="text/javascript" src='./renderer/copy.js'></script>
   <script type="text/javascript" src='./renderer/loaduml.js'></script>
 </head>
 
@@ -21,7 +22,10 @@
     <pre class="code-wrapper">
       <code id='uml' class="code-wrapper" contenteditable>
       </code>
-      <input type='button' id='preview' value='preview'>
+      <div class='operations'>
+        <input type='button' id='preview' value='preview'>
+        <input type='button' id='copy' value='copy'>
+      </div>
     </pre>
     <img id='output'>
   </div>
