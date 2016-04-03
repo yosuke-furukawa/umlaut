@@ -1,15 +1,23 @@
 {
   "name": "umlaut",
   "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "description": "UML previewer on electron",
+  "main": "main.js",
   "scripts": {
     "start": "electron main.js",
-    "release": "electron-packager build/ --all",
+    "release": "electron-packager . --all --out=build/ --overwrite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yosuke-furukawa/umlaut.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yosuke-furukawa/umlaut/issues"
+  },
+  "homepage": "https://github.com/yosuke-furukawa/umlaut#readme",
+  "keywords": ["electron", "plantuml"],
+  "author": "yosuke-furukawa",
   "license": "MIT",
   "dependencies": {
     "electron-prebuilt": "^0.37.3",
