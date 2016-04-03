@@ -11,10 +11,10 @@ $ brew install graphviz
 
 #Install
 
-Download form [releases](https://github.com/yosuke-furukawa/umlaut/releases).
+Download from [releases](https://github.com/yosuke-furukawa/umlaut/releases).
 
-- [Mac](https://github.com/yosuke-furukawa/umlaut/releases/download/v0.1.4/umlaut.app.zip)
-- [Win](https://github.com/yosuke-furukawa/umlaut/releases/download/v0.1.4/umlaut.exe.zip)
+- [Mac](https://github.com/yosuke-furukawa/umlaut/releases/download/v0.1.5/umlaut.app.zip)
+- [Win](https://github.com/yosuke-furukawa/umlaut/releases/download/v0.1.5/umlaut.exe.zip)
 
 
 OR
