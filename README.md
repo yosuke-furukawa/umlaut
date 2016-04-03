@@ -19,3 +19,4 @@ $ umlaut
 #images
 
 
+![umlaut-anime](./images/umlaut-anime.gif)
