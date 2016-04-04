@@ -5,6 +5,8 @@ Umlaut can parse PlantUML and show UML image.
 
 #PreInstall
 
+- JDK http://www.oracle.com/technetwork/java/javase/downloads/index.html
+
 ```
 $ brew install graphviz
 ```
