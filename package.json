@@ -18,10 +18,14 @@
     "url": "https://github.com/yosuke-furukawa/umlaut/issues"
   },
   "homepage": "https://github.com/yosuke-furukawa/umlaut#readme",
-  "keywords": ["electron", "plantuml"],
+  "keywords": [
+    "electron",
+    "plantuml"
+  ],
   "author": "yosuke-furukawa",
   "license": "MIT",
   "dependencies": {
+    "dialogs": "^1.1.12",
     "electron-prebuilt": "^0.37.3",
     "jquery": "^2.2.2",
     "node-plantuml": "^0.4.4"

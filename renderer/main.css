@@ -6,9 +6,27 @@
   display: flex;
   flex-direction: row;
 }
+.vertical {
+  display: flex;
+  flex-direction: column;
+}
 .code-wrapper{
   display:block;
   overflow-x:auto;
   padding:0.5em;
   background:#F0F0F0
 }
+
+img {
+    background: transparent;
+    border: 10px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    display: block;
+    margin: 1.3em auto;
+    max-width: 70%;
+}
+
+.d-none{
+  display: none;
+}
+

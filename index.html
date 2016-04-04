@@ -1,33 +1,58 @@
 <html>
 <head>
   <link rel="stylesheet" href="./renderer/main.css">
+  <link rel="stylesheet" href="./css/photon.css">
   <script type="text/javascript" src='./renderer/plantuml.js'></script>
   <script type="text/javascript" src='./renderer/copy.js'></script>
+  <script type="text/javascript" src='./renderer/stock.js'></script>
+  <script type="text/javascript" src='./renderer/sample.js'></script>
   <script type="text/javascript" src='./renderer/loaduml.js'></script>
 </head>
 
 <body>
-  <div>
-    Sample :
-    <ul>
-      <li><a href='#' onclick='loaduml("./sample/class.uml")'>class diagram</a></li>
-      <li><a href='#' onclick='loaduml("./sample/sequence.uml")'>sequence diagram</a></li>
-      <li><a href='#' onclick='loaduml("./sample/activity.uml")'>activity diagram</a></li>
-      <li><a href='#' onclick='loaduml("./sample/usecase.uml")'>usecase diagram</a></li>
-      <li><a href='#' onclick='loaduml("./sample/component.uml")'>component diagram</a></li>
-      <li><a href='#' onclick='loaduml("./sample/state.uml")'>state diagram</a></li>
-    </ul>
-  </div>
+  <header class="toolbar toolbar-header">
+  <h1 class="title">Header with actions</h1>
+
+  <div class="toolbar-actions">
+    <div class="btn-group">
+      <button id="samples-btn" class="btn btn-default">
+        <span class="icon icon-home"></span>
+        Samples
+      </button>
+      <button id="stocks-btn" class="btn btn-default">
+        <span class="icon icon-folder"></span>
+        Stocks
+      </button>
+    </div>
+
+  </header>  
   <div class='editor'>
+    <div id='sample-list' class='leftpane d-none'>
+      <ul class='list-group'>
+        <li class='list-group-header'>Samples:</li>
+        <li class='list-group-item'><a href='#' onclick='loaduml("./sample/class.uml")'>class diagram</a></li>
+        <li class='list-group-item'><a href='#' onclick='loaduml("./sample/sequence.uml")'>sequence diagram</a></li>
+        <li class='list-group-item'><a href='#' onclick='loaduml("./sample/activity.uml")'>activity diagram</a></li>
+        <li class='list-group-item'><a href='#' onclick='loaduml("./sample/usecase.uml")'>usecase diagram</a></li>
+        <li class='list-group-item'><a href='#' onclick='loaduml("./sample/component.uml")'>component diagram</a></li>
+        <li class='list-group-item'><a href='#' onclick='loaduml("./sample/state.uml")'>state diagram</a></li>
+      </ul>
+    </div>
+    <div id='stock-list' class='leftpane'>
+      <ul id='stock-list-group' class='list-group'>
+        <li id='stock-header' class='list-group-header'>Stocks:</li>
+      </ul>
+    </div>
     <pre class="code-wrapper">
       <code id='uml' class="code-wrapper" contenteditable>
       </code>
-      <div class='operations'>
-        <input type='button' id='preview' value='preview'>
-        <input type='button' id='copy' value='copy'>
-      </div>
+  <div class='operations'>
+    <input type='button' id='preview' class='btn btn-large btn-primary' value='preview'>
+    <input type='button' id='copy'  class='btn btn-large btn-positive' value='copy'>
+    <input type='button' id='stock' class='btn btn-large btn-default' value='stock'>
+  </div>
     </pre>
-    <img id='output'>
+    <a download='output.png' id='download'><img id='output'></a>
   </div>
 </body>
 </html> 

@@ -3,6 +3,7 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 const UMLAUT_DIR = path.join(os.tmpDir(), 'umlaut_dir');
+const INTERVAL = 5000;
 
 try {
   fs.accessSync(UMLAUT_DIR);
@@ -17,7 +18,9 @@ const main = () => {
   const umlArea = document.getElementById('uml');
   const preview = document.getElementById('preview');
   const img = document.getElementById('output');
+  const download = document.getElementById('download');
   img.src = `${FILENAME}`;
+  download.href = `${FILENAME}`;
   try {
     umlArea.innerText = umlArea.innerText.trim() || fs.readFileSync(UMLNAME).toString();
   } catch (e) {
@@ -33,11 +36,12 @@ const main = () => {
     imageWriter.on('finish', () => {
       const timestamp = new Date().getTime();
       img.src = `${FILENAME}?t=${timestamp}`;
+      download.href = `${FILENAME}?t=${timestamp}`;
     });
   };
   window.onUpdate = onUpdate;
+  setInterval(onUpdate, INTERVAL);
 
   preview.addEventListener('click', onUpdate);
-  umlArea.addEventListener('input', onUpdate);
 };
 document.addEventListener('DOMContentLoaded', main);
