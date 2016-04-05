@@ -1,13 +1,13 @@
-try {
-  fs.mkdirSync(path.join(homeDir, '.umlaut_dir'));
-} catch(e){
-  // do nothing
-}
 const stockMain = () => {
   const dialogs = require('dialogs')();
   const fs = require('fs');
   const path = require('path');
   const homeDir = require('os').homedir();
+  try {
+    fs.mkdirSync(path.join(homeDir, '.umlaut_dir'));
+  } catch(e){
+    // do nothing
+  }
   const stock = document.getElementById('stock');
   const stocks = document.getElementById('stocks-btn');
   const stockList = document.getElementById('stock-list');
